@@ -1,0 +1,116 @@
+.skull-diagram {
+  background: var(--bg-secondary);
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.diagram-header {
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+.diagram-header h4 {
+  font-family: var(--font-display);
+  color: var(--accent-gold);
+  font-size: 1rem;
+  margin-bottom: var(--space-xs);
+}
+
+.diagram-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.skull-svg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.bone-region {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.bone-region:hover {
+  opacity: 1;
+  stroke-width: 2;
+}
+
+.bone-region.highlighted {
+  opacity: 1;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: url(#glow) brightness(1);
+  }
+  50% {
+    filter: url(#glow) brightness(1.2);
+  }
+}
+
+.bone-label {
+  font-family: var(--font-body);
+  pointer-events: none;
+  transition: fill 0.3s ease;
+}
+
+.bone-label.highlighted {
+  font-weight: bold;
+}
+
+.suture-line {
+  pointer-events: none;
+}
+
+.foramen-marker circle {
+  transition: all 0.3s ease;
+}
+
+.foramen-marker:hover circle {
+  r: 5;
+  fill: #cc0000;
+}
+
+.bone-info-overlay {
+  text-align: center;
+  padding: var(--space-sm);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  margin-top: var(--space-sm);
+}
+
+.bone-info-overlay .latin-name {
+  display: block;
+  font-family: var(--font-display);
+  color: var(--accent-gold);
+  font-size: 1rem;
+}
+
+.bone-info-overlay .german-name {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .skull-diagram {
+    padding: var(--space-sm);
+  }
+  
+  .skull-svg {
+    max-width: 300px;
+  }
+  
+  .bone-label {
+    font-size: 6px;
+  }
+}

@@ -1,0 +1,209 @@
+.room {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: 
+    radial-gradient(ellipse at center, rgba(26, 26, 46, 0.9) 0%, rgba(15, 15, 26, 1) 70%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a574' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Intro Phase */
+.room-intro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.room-intro h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-xl);
+}
+
+.room-intro .atmosphere {
+  font-style: italic;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: var(--space-lg);
+}
+
+.room-intro .objective {
+  color: var(--text-primary);
+  max-width: 500px;
+  margin-bottom: var(--space-2xl);
+}
+
+.intro-actions {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+/* Puzzle Area */
+.puzzle-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+}
+
+.puzzle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--bg-tertiary);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.puzzle-info {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.puzzle-number {
+  font-family: var(--font-display);
+  color: var(--accent-gold);
+}
+
+.puzzle-score {
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+}
+
+.puzzle-tools {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.hint-btn {
+  font-size: 0.875rem;
+}
+
+.puzzle-coming-soon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.puzzle-coming-soon h2 {
+  font-family: var(--font-display);
+  color: var(--accent-gold);
+  margin-bottom: var(--space-md);
+}
+
+.puzzle-coming-soon p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+/* Complete Phase */
+.room-complete {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.complete-ornament {
+  font-size: 4rem;
+  margin-bottom: var(--space-lg);
+}
+
+.room-complete h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-lg);
+}
+
+.complete-stars {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.complete-stars .star {
+  font-size: 3rem;
+  color: var(--bg-tertiary);
+}
+
+.complete-stars .star.earned {
+  color: var(--accent-gold);
+  text-shadow: 0 0 20px rgba(212, 165, 116, 0.5);
+}
+
+.complete-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  background: var(--bg-card);
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item .stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.stat-item .stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+}
+
+.improvement-tip {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+  background: rgba(250, 191, 36, 0.1);
+  border-radius: var(--radius-md);
+}
+
+.complete-actions {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .puzzle-header {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .complete-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .complete-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .complete-actions .btn {
+    width: 100%;
+  }
+}
