@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/head-anatomy/static/css/main.ecf87c06.css",
+    "main.js": "/head-anatomy/static/js/main.cce82e34.js",
+    "static/media/wichtige_foramina.png": "/head-anatomy/static/media/wichtige_foramina.ae94af216929be4099a5.png",
+    "static/media/landmarken_und_suturen.png": "/head-anatomy/static/media/landmarken_und_suturen.6be83a11e945b8124a37.png",
+    "static/media/gesichts_knochen.png": "/head-anatomy/static/media/gesichts_knochen.77d26b301614e4d61d71.png",
+    "static/media/schaedel_knochen.png": "/head-anatomy/static/media/schaedel_knochen.4b5978b4e38962665d9c.png",
+    "index.html": "/head-anatomy/index.html",
+    "main.ecf87c06.css.map": "/head-anatomy/static/css/main.ecf87c06.css.map",
+    "main.cce82e34.js.map": "/head-anatomy/static/js/main.cce82e34.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ecf87c06.css",
+    "static/js/main.cce82e34.js"
+  ]
+}
